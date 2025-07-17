@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Contacto | Hospedaje Royal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+       header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* ▼ Submenús ▼ */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 999;
+    flex-direction: column;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    font-weight: normal;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #f39c12;
+}
+
+/*estilos del body*/
+
+body {
+      background-color: #f5f8fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .contact-section {
+      padding: 60px 0;
+    }
+
+    .contact-title {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+
+    .contact-info i {
+      font-size: 1.3rem;
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+/* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+  <div class="header-content">
+    <div class="logo">🏨 Hospedaje Royal</div>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+
+        <li>
+          <a href="#habitaciones">Habitaciones</a>
+          <ul class="dropdown-menu">
+            <li><a href="habitaciones.html">Ver Habitaciones</a></li>
+            <li><a href="habitacion-simple.html">Habitación Simple</a></li>
+            <li><a href="habitacion-doble.html">Habitación Doble</a></li>
+            <li><a href="suite-royal.html">Suite Royal</a></li>
+            <li><a href="reservas.html">Reservar Ahora</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#servicios">Servicios</a>
+          <ul class="dropdown-menu">
+            <li><a href="servicios.html">Todos los Servicios</a></li>
+            
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Experiencias</a>
+          <ul class="dropdown-menu">
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="ofertas-especiales.html">Ofertas Especiales</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body>
+
+  <section class="contact-section container mt-5 pt-8">
+    <div class="text-center mb-5">
+      <h2 class="contact-title animate__animated animate__fadeInDown">Contáctanos</h2>
+      <p class="text-muted">¿Tienes dudas o deseas reservar? ¡Estamos para ayudarte!</p>
+    </div>
+
+    <div class="row g-5">
+      <!-- Formulario -->
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <div class="contact-info mb-4">
+          <h5 class="mb-3">Información de contacto</h5>
+          <p><i class="bi bi-telephone-fill"></i> Tel: (066) 321456 / Cel: 987 654 321</p>
+          <p><i class="bi bi-envelope-fill"></i> Email: info@hospedajeroyal.com</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Dirección: Jr. Real N° 123 - Huanta, Ayacucho, Perú</p>
+        </div>
+
+        <div class="mb-4">
+          <h5 class="mb-3">Síguenos</h5>
+          <a href="#" class="me-3 text-primary"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="me-3 text-danger"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-info"><i class="bi bi-whatsapp fs-4"></i></a>
+        </div>
+
+        <div>
+          <h5 class="mb-3">Ubicación</h5>
+          <iframe src="https://www.google.com/maps?q=Huanta,+Ayacucho,+Perú&output=embed" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hospedaje Royal</h3>
+                    <p>Tu hogar lejos de casa en Huanta. Ofrecemos comodidad, servicio de calidad y la mejor atención para hacer de tu estadía una experiencia inolvidable.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Jr. San Martín 123, Huanta, Ayacucho</p>
+                    <p>📞 (066) 123-456</p>
+                    <p>📧 info@hospedajeroyal.com</p>
+                    <p>⏰ Recepción 24 horas</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Facebook | Instagram | WhatsApp</p>
+                    <p>Mantente conectado con nosotros para ofertas especiales y noticias.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hospedaje Royal. Todos los derechos reservados. | Huanta - Ayacucho - Perú</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

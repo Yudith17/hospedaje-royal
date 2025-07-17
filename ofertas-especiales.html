@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedaje Royal - Huanta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+       header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* ▼ Submenús ▼ */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 999;
+    flex-direction: column;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    font-weight: normal;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #f39c12;
+}
+
+/*estilos de body*/
+body {
+      background: #f5f8fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .promo-card {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .promo-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .promo-img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .section-title {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+/* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #f39c12;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+  <div class="header-content">
+    <div class="logo">🏨 Hospedaje Royal</div>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+
+        <li>
+          <a href="#habitaciones">Habitaciones</a>
+          <ul class="dropdown-menu">
+            <li><a href="habitaciones.html">Ver Habitaciones</a></li>
+            <li><a href="habitacion-simple.html">Habitación Simple</a></li>
+            <li><a href="habitacion-doble.html">Habitación Doble</a></li>
+            <li><a href="suite-royal.html">Suite Royal</a></li>
+            <li><a href="reservas.html">Reservar Ahora</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#servicios">Servicios</a>
+          <ul class="dropdown-menu">
+            <li><a href="servicios.html">Todos los Servicios</a></li>
+          
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Experiencias</a>
+          <ul class="dropdown-menu">
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="ofertas-especiales.html">Ofertas Especiales</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body>
+
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title animate__animated animate__fadeInDown">Ofertas Especiales</h2>
+      <p class="text-muted">Promociones por temporada y beneficios para nuestros huéspedes</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Oferta 1 -->
+      <div class="col-md-4 animate__animated animate__fadeInUp">
+        <div class="card promo-card">
+          <img src="https://scontent.flim2-1.fna.fbcdn.net/v/t39.30808-6/485956488_1161171279351850_4024427751871540090_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHA8-Fdsfxs7JUQIC11GKIOnHHivXfX5MScceK9d9fkxIjWtLFAEreIZOzKiVFb-jtwESB6te32q2Z0ze7denWt&_nc_ohc=kd4CMJg0WUoQ7kNvwEJPaXI&_nc_oc=AdnUNKx20mb0ngbF2DHgsFJe4oxv0Y1MQ9-h_2z7kJcW3MQnS7Ds2ZxLGQgH4IjtwFXFPvSFm_VrPIrwLpq5lCjL&_nc_zt=23&_nc_ht=scontent.flim2-1.fna&_nc_gid=Puw3P3mopCBF47DUUNKBMw&oh=00_AfQRlQujYxTArWKJngdpBlc5ifBiT1LIkm5FAmbWxqGXXA&oe=687F3D5C" class="promo-img" alt="Semana Santa">
+          <div class="card-body">
+            <h5 class="card-title">🌸 Semana Santa</h5>
+            <p class="card-text">Descuento del 20% en todas las habitaciones durante Semana Santa. Incluye desayuno.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oferta 2 -->
+      <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="card promo-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnOjy3Rfi-XjAJom1ZknAn0hv8FrY-X_vOVw&s" class="promo-img" alt="Fiestas Patrias">
+          <div class="card-body">
+            <h5 class="card-title">🎉 Fiestas Patrias</h5>
+            <p class="card-text">Reserva anticipada y obtén 20% de descuento  Solo válido en habitaciones dobles.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oferta 3 -->
+      <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="card promo-card">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/328843642.jpg?k=9b574d1eb079445fc96083d740bbd983a13c426049bf79b3ff76fb286852f038&o=&hp=1" class="promo-img" alt="Año Nuevo">
+          <div class="card-body">
+            <h5 class="card-title">🎆 Año Nuevo</h5>
+            <p class="card-text">Celebra con nosotros con un paquete especial que incluye cena, brindis y show en vivo.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oferta 4 -->
+      <div class="col-md-6 animate__animated animate__fadeInUp animate__delay-3s">
+        <div class="card promo-card">
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/107738501.jpg?k=e88e725a62acf30e07a5b671d51ef486e88e2b0e1f55cebc272851965649003f&o=&hp=1" class="promo-img" alt="Paquete Parejas">
+          <div class="card-body">
+            <h5 class="card-title">💕 Paquete para Parejas</h5>
+            <p class="card-text">Habitación matrimonial + cena romántica + yakusi, por solo S/ 250.</p>
+            <a href="#" class="btn btn-outline-warning btn-sm">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oferta 5 -->
+      <div class="col-md-6 animate__animated animate__fadeInUp animate__delay-4s">
+        <div class="card promo-card">
+          <img src="https://scontent.flim2-3.fna.fbcdn.net/v/t39.30808-6/486584002_1161171272685184_4073784395332040301_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHgp3lTypAJTl5x1x1ChH6I_vfMz1o9FYP-98zPWj0Vg3DwPiRjV-iTLgeWKzjoQi1c67ilbp8trCDSwj3f79KB&_nc_ohc=dYFkrm70t-cQ7kNvwH3S8mc&_nc_oc=AdkIpVWxJwA5f2kobxVWlr1t9dnoJLqHlpI967CzInHt_FGNyDvmlU7U0ql7vAZdHqMlREajMawuM9j9Dc_HdMgz&_nc_zt=23&_nc_ht=scontent.flim2-3.fna&_nc_gid=pTxGuRa2_WQwQsFDdjV4xQ&oh=00_AfRe85xdl_xdpTHxwBDbXEUEIVz8PoTQQhsa8fiHtDByMw&oe=687F3452" class="promo-img" alt="Grupos">
+          <div class="card-body">
+            <h5 class="card-title">👨‍👩‍👧‍👦 Grupos y Familias</h5>
+            <p class="card-text">Hasta 30% de descuento en reservas para grupos de más de 4 personas o estadías largas.</p>
+            <a href="#" class="btn btn-outline-dark btn-sm">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hospedaje Royal</h3>
+                    <p>Tu hogar lejos de casa en Huanta. Ofrecemos comodidad, servicio de calidad y la mejor atención para hacer de tu estadía una experiencia inolvidable.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="reservas.html">Reservas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📍 Jr. San Martín 123, Huanta, Ayacucho</p>
+                    <p>📞 (066) 123-456</p>
+                    <p>📧 info@hospedajeroyal.com</p>
+                    <p>⏰ Recepción 24 horas</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Facebook | Instagram | WhatsApp</p>
+                    <p>Mantente conectado con nosotros para ofertas especiales y noticias.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hospedaje Royal. Todos los derechos reservados. | Huanta - Ayacucho - Perú</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+

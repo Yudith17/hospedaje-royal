@@ -1,0 +1,29 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f8f9fa;
+}
+
+.text-purple {
+    color: #764ba2 !important;
+}
+
+.room-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.btn-royal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-royal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
